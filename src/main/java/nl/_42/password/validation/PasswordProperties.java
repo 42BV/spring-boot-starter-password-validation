@@ -15,4 +15,9 @@ public class PasswordProperties {
      * Only used when minimumLengthEnabled = true.
      */
     private int minimumLength = 8;
+
+    /**
+     * Only used when strengthEnabled = true.
+     */
+    private String strengthRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=.,?!])(?=\\S+$).*$";
 }
