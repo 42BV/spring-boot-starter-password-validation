@@ -11,6 +11,8 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 public class PasswordProperties {
-    private boolean minimumLengthEnabled = false;
+    /**
+     * Only used when minimumLengthEnabled = true.
+     */
     private int minimumLength = 8;
 }
