@@ -6,11 +6,16 @@ Configuration:
 
 ```yaml
 password:
+  different-than-current-enabled
   minimum-length-enabled
   strength-enabled
   minimum-length
   strength-regex
 ```
+
+### password.different-than-current-enabled
+Default: `false`  
+Enables the validation where the password is not allowed to be the password the user is currently using.
 
 ### password.minimum-length-enabled
 Default: `false`  

@@ -1,9 +1,9 @@
-package nl._42.password;
+package nl._42.password.rule;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import nl._42.password.validation.PasswordProperties;
-import nl._42.password.validation.PasswordStrengthRule;
+import nl._42.password.validation.rule.PasswordStrengthRule;
 import nl._42.password.validation.PasswordValidationFailedException;
 
 import org.junit.jupiter.api.BeforeAll;

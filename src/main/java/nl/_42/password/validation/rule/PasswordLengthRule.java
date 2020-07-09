@@ -1,4 +1,9 @@
-package nl._42.password.validation;
+package nl._42.password.validation.rule;
+
+import nl._42.password.validation.PasswordProperties;
+import nl._42.password.validation.PasswordValidationErrorCodes;
+import nl._42.password.validation.PasswordValidationFailedException;
+import nl._42.password.validation.ValidationRule;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.security.core.Authentication;
