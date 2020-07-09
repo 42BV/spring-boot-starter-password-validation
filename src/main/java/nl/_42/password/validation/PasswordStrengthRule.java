@@ -7,9 +7,16 @@ import org.springframework.stereotype.Component;
 @Component
 @ConditionalOnProperty("password.strength-enabled")
 public class PasswordStrengthRule implements ValidationRule {
+
+    private final PasswordProperties passwordProperties;
+
+    public PasswordStrengthRule(PasswordProperties passwordProperties) {
+        this.passwordProperties = passwordProperties;
+    }
+
     @Override
     public void validate(String password, Authentication authentication) {
-        if (!password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=.,?!])(?=\\S+$).*$")) {
+        if (!password.matches(passwordProperties.getStrengthRegex())) {
             throw new PasswordValidationFailedException(PasswordValidationErrorCodes.NOT_STRONG_ENOUGH);
         }
     }
