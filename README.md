@@ -8,6 +8,7 @@ Configuration:
 password:
   different-than-current-enabled
   minimum-length-enabled
+  not-used-in-past-enabled
   strength-enabled
   minimum-length
   strength-regex
@@ -21,6 +22,10 @@ Enables the validation where the password is not allowed to be the password the 
 Default: `false`  
 Enables the minimum length check. See also property: password.minimum-length.
 
+### password.not-used-in-past-enabled
+Default: `false`  
+Enables the validation where the password is not allowed to have been used in the past by the same user.  
+Requires you to provide a bean of `OldPasswordRepository` as a means to retrieve the old passwords.
 
 ### password.strength-enabled
 Default: `false`  
