@@ -11,7 +11,7 @@
         <version>9</version>
     </parent>
 
-    <groupId>nl._42</groupId>
+    <groupId>nl.42</groupId>
     <artifactId>spring-boot-starter-password-validation</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>Password validator</name>
