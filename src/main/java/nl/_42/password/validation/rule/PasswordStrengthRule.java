@@ -1,12 +1,12 @@
 package nl._42.password.validation.rule;
 
+import nl._42.password.validation.PasswordHolder;
 import nl._42.password.validation.PasswordProperties;
 import nl._42.password.validation.PasswordValidationErrorCodes;
 import nl._42.password.validation.PasswordValidationFailedException;
 import nl._42.password.validation.ValidationRule;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -20,7 +20,7 @@ public class PasswordStrengthRule implements ValidationRule {
     }
 
     @Override
-    public void validate(String password, Authentication authentication) {
+    public void validate(String password, PasswordHolder passwordHolder) {
         if (!password.matches(passwordProperties.getStrengthRegex())) {
             throw new PasswordValidationFailedException(PasswordValidationErrorCodes.NOT_STRONG_ENOUGH);
         }
