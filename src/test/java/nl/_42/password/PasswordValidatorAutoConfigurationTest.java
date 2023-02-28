@@ -1,8 +1,8 @@
 package nl._42.password;
 
 import nl._42.password.validation.PasswordValidator;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -14,7 +14,7 @@ public class PasswordValidatorAutoConfigurationTest {
 
     @Test
     public void configure_shouldSucceed() {
-        Assert.assertNull(validator);
+        Assertions.assertNotNull(validator);
     }
 
 }

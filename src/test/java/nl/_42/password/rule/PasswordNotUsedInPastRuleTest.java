@@ -1,17 +1,16 @@
 package nl._42.password.rule;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import java.util.Collections;
-import java.util.Set;
-
 import nl._42.password.validation.PasswordValidationFailedException;
 import nl._42.password.validation.rule.PasswordNotUsedInPastRule;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.util.Collections;
+import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class PasswordNotUsedInPastRuleTest {
 
@@ -43,4 +42,5 @@ class PasswordNotUsedInPastRuleTest {
 
         assertThrows(PasswordValidationFailedException.class, () -> rule.validate("Password", null));
     }
+
 }
