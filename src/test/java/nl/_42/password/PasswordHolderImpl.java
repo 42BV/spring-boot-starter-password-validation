@@ -6,10 +6,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import nl._42.password.validation.PasswordHolder;
 
-@AllArgsConstructor
 @Getter
-@NoArgsConstructor
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class PasswordHolderImpl implements PasswordHolder {
     private String password;
+
 }
