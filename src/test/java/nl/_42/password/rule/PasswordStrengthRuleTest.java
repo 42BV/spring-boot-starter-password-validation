@@ -1,13 +1,12 @@
 package nl._42.password.rule;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import nl._42.password.validation.PasswordProperties;
-import nl._42.password.validation.rule.PasswordStrengthRule;
 import nl._42.password.validation.PasswordValidationFailedException;
-
+import nl._42.password.validation.rule.PasswordStrengthRule;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class PasswordStrengthRuleTest {
 
@@ -48,4 +47,5 @@ class PasswordStrengthRuleTest {
         assertThrows(PasswordValidationFailedException.class, () -> passwordStrengthRule.validate("1aA", null));
 
     }
+
 }
